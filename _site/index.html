@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generalizing the ISA to the ILA – A Software/Hardware Interface for Accelerator-rich Platforms</title>
+    <!-- Begin Jekyll SEO tag v2.7.1 -->
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Generalizing the ISA to the ILA" />
+<meta name="author" content="Bo-Yuan Huang" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A Software/Hardware Interface for Accelerator-rich Platforms" />
+<meta property="og:description" content="A Software/Hardware Interface for Accelerator-rich Platforms" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="Generalizing the ISA to the ILA" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Generalizing the ISA to the ILA" />
+<script type="application/ld+json">
+{"description":"A Software/Hardware Interface for Accelerator-rich Platforms","url":"http://localhost:4000/","author":{"@type":"Person","name":"Bo-Yuan Huang"},"@type":"WebSite","headline":"Generalizing the ISA to the ILA","name":"Generalizing the ISA to the ILA","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+
+<meta property="og:description" content="A Software/Hardware Interface for Accelerator-rich Platforms" />
+
+<meta name="author" content="Generalizing the ISA to the ILA" />
+
+
+
+
+<meta property="og:image" content="http://localhost:4000/images/ilang-logo.png"/>
+<meta property="twitter:image" content="http://localhost:4000/images/ilang-logo.png"/>
+
+
+
+    <link rel="stylesheet" type="text/css" href="/assets/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Generalizing the ISA to the ILA - A Software/Hardware Interface for Accelerator-rich Platforms" href="/feed.xml" />
+    <link rel="canonical" href="http://localhost:4000/" />
+
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo-byh.png">
+    
+
+  </head>
+
+  <body>
+    <div id="bar"></div>
+    <div class="wrapper-container">
+      <div class="wrapper-masthead">
+        <div class="container">
+          <header class="masthead clearfix">
+            <a href="/" class="site-avatar"><img src="/images/ilang-logo.png" alt="" /></a>
+
+            <div class="site-info">
+              <h1 class="site-name"><a href="/">Generalizing the ISA to the ILA</a></h1>
+              <p class="site-description">A Software/Hardware Interface for Accelerator-rich Platforms</p> 
+            </div>
+
+            <nav>
+              <a href="/">About</a>
+              <a href="/search">Search</a>
+            </nav>
+          </header>
+        </div>
+      </div>
+
+      <div class="wrapper-main">
+        <div id="main" role="main" class="container">
+          <article class="page">
+
+  <h1></h1>
+
+  <div class="entry">
+    <p><strong><em>ISCA Tutorial</em></strong><br />
+<em>June 11–15, 2022</em><br />
+<em>New York City, New York, USA</em></p>
+
+<h2 id="overview">Overview</h2>
+
+<p>The Instruction-Set Architecture (ISA) has long served as the software/hardware interface for programmable processors.
+The ISA simultaneously serves as a specification for the hardware implementation and as an abstraction of the hardware for software development.
+Over the years, this interface has enabled independent development of the hardware and software.
+This has enabled ISA-compliant hardware upgrades and portability of software applications.
+With the advent of multiprocessors, the memory consistency model (MCM) provided the software/hardware interface for processor interactions through shared memory.
+As with the ISA, the MCM serves both as the specification for the hardware and its abstraction for software.
+We are now in an era where accelerator-rich platforms are widely used to deliver the power-performance requirements of emerging applications.
+Unfortunately, there is no widely accepted software/hardware interface for these platforms - this has implications for both hardware and software development.
+The accelerator specifications are typically informal, with the possible availability of executable reference models (C/C++/SystemC).
+The software development largely depends on APIs providing platform-specific hardware functions calls for utilizing the hardware specialization - similar to how peripheral devices are accessed.
+This results in software that is not portable across platforms or optimizable using standard compiler flows.</p>
+
+<p>The recently developed Instruction-Level Abstraction (ILA) provides a software/hardware interface that generalizes the notion of ISAs to accelerators.
+The ILA model of an accelerator is a functional model that defines the response of the accelerator to commands at its interface.
+These commands serve as “instructions” for the accelerator.
+These commands are generally memory-mapped input-output (MMIO) instructions issued by a host processor - thus, there is a one-to-one mapping of these MMIO instructions and ILA instructions of the accelerator.
+As with the ISA, the ILA defines the architectural state of the accelerator as the state that is persistent across instructions.
+Again, as with the ISA, the ILA is a modular specification that defines how this architectural state is updated by each instruction.
+Further, the ILA-MCM model shows how the operational ILA model can be integrated with an axiomatic memory consistency model for a detailed functional specification that includes accelerator-processor interactions through shared memory.</p>
+
+<hr />
+
+<h2 id="tentative-schedule">Tentative Schedule</h2>
+
+<p>In this tutorial we will introduce the ILA model and its application to the different use cases for accelerator-rich platform highlighted above.</p>
+
+<ul>
+  <li><strong>9:00 - 9:10 AM:</strong> <strong><em>Software/Hardware Interfaces</em></strong><br />
+Review existing software/hardware interfaces used for accelerator-rich platforms and evaluate their strengths and weaknesses.</li>
+  <li><strong>9:10 - 9:40 AM:</strong> <strong><em>ILA Models</em></strong><br />
+Formally define the ILA model including the instructions, architectural state and per-instruction state update functions - this makes the model amenable to formal analysis tools.</li>
+  <li><strong>9:45 - 10:10 AM:</strong> <strong><em>Simulation and Co-simulation</em></strong><br />
+Show how the ILA model enables automated generation of executable functional models (C++/SystemC) that can be used in hardware simulation and hardware-software co-simulation.</li>
+  <li><strong>10:15 - 10:35 AM:</strong> <strong><em>Formal Hardware Verification</em></strong><br />
+Show how the formal ILA model can be used for formal verification of the hardware implementation and hardware-software co-verification.</li>
+  <li><strong>10:40 - 11:10 AM:</strong> <strong><em>Memory Consistency</em></strong><br />
+Show how the ILA-MCM model can be used to reason about correctness of code executing across processors and accelerators for a given MCM.</li>
+  <li><strong>11:15 - 12:00 PM:</strong> <strong><em>Compilation to Accelerators</em></strong><br />
+Show how the ILA instructions can be used in a compiler flow targeting specialized accelerators - in particular a compiler flow for deep-learning accelerators using the TVM compiler framework.</li>
+</ul>
+
+<hr />
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+  <li>“<a href="https://dl.acm.org/doi/abs/10.1145/3282444">Instruction-Level Abstraction (ILA): A Uniform Specification for System-on-Chip (SoC) Verification</a>” on the ILA formal model (TODAES 2019 best paper award).</li>
+  <li>The ILAng platform <a href="https://github.com/PrincetonUniversity/ILAng">repository</a> and <a href="https://bo-yuan-huang.gitbook.io/ilang/">user manual</a>.</li>
+</ul>
+
+<hr />
+
+<h2 id="organizers">Organizers</h2>
+
+<ul>
+  <li>Sharad Malik (Princeton University)</li>
+  <li>Aarti Gupta (Princeton University)</li>
+  <li>Bo-Yuan Huang (Intel Corporation)</li>
+</ul>
+
+  </div>
+</article>
+
+        </div>
+      </div>
+
+      <div class="wrapper-footer">
+        <div class="container">
+          <footer class="footer">
+            
+<a href="mailto:sharad@princeton.edu"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/PrincetonUniversity/ILAng"><i class="svg-icon github"></i></a>
+
+
+
+
+
+
+
+
+
+
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
