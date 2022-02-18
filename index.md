@@ -5,7 +5,7 @@ permalink: /
 ---
 
 ***ISCA Tutorial***  
-*June 11–15, 2022*  
+*June 12, 2022*  
 *New York City, New York, USA*
 
 ## Overview
@@ -36,17 +36,17 @@ Further, the ILA-MCM model shows how the operational ILA model can be integrated
 
 In this tutorial we will introduce the ILA model and its application to the different use cases for accelerator-rich platform highlighted above.
 
-- **9:00 - 9:10 AM:** ***Software/Hardware Interfaces***  
+- **1:00 - 1:10 PM:** ***Software/Hardware Interfaces***  
 Review existing software/hardware interfaces used for accelerator-rich platforms and evaluate their strengths and weaknesses.
-- **9:10 - 9:40 AM:** ***ILA Models***  
+- **1:10 - 1:40 PM:** ***ILA Models***  
 Formally define the ILA model including the instructions, architectural state and per-instruction state update functions - this makes the model amenable to formal analysis tools.
-- **9:45 - 10:10 AM:** ***Simulation and Co-simulation***  
+- **1:45 - 2:10 PM:** ***Simulation and Co-simulation***  
 Show how the ILA model enables automated generation of executable functional models (C++/SystemC) that can be used in hardware simulation and hardware-software co-simulation.
-- **10:15 - 10:35 AM:** ***Formal Hardware Verification***  
+- **2:15 - 2:35 PM:** ***Formal Hardware Verification***  
 Show how the formal ILA model can be used for formal verification of the hardware implementation and hardware-software co-verification.
-- **10:40 - 11:10 AM:** ***Memory Consistency***  
+- **2:40 - 3:10 PM:** ***Memory Consistency***  
 Show how the ILA-MCM model can be used to reason about correctness of code executing across processors and accelerators for a given MCM.
-- **11:15 - 12:00 PM:** ***Compilation to Accelerators***  
+- **3:15 - 4:00 PM:** ***Compilation to Accelerators***  
 Show how the ILA instructions can be used in a compiler flow targeting specialized accelerators - in particular a compiler flow for deep-learning accelerators using the TVM compiler framework.
 
 ---
