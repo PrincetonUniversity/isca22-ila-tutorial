@@ -5,7 +5,7 @@ permalink: /
 ---
 
 ***ISCA Tutorial***  
-*June 12, 2022*  
+*June 19, 2022*  
 *New York City, New York, USA*
 
 ## Overview
