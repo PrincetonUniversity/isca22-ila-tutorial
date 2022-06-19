@@ -36,20 +36,20 @@ Further, the ILA-MCM model shows how the operational ILA model can be integrated
 
 In this tutorial we will introduce the ILA model and its application to the different use cases for accelerator-rich platform highlighted above.
 
-- **1:00 - 1:10 PM:** ***Software/Hardware Interfaces***  
+- **1:30 - 1:40 PM:** ***Software/Hardware Interfaces***  
 Review the need for new software-hardware interfaces for accelerator-rich platforms
-- **1:10 - 1:50 PM:** ***ILA Models***  
+- **1:40 - 2:30 PM:** ***ILA Models***  
 Formally define the ILA model including the instructions, architectural state and per-instruction state update functions - this makes the model amenable to formal analysis tools
-- **1:50 - 2:30 PM:** ***Formal Hardware Verification***  
-Show how the formal ILA model can be used for formal verification of the hardware implementation
 - **2:30 - 3:00 PM:** ***Break***
-- **3:00 - 3:15 PM:** ***Simulation and Co-simulation***  
+- **3:00 - 3:20 PM:** ***Formal Hardware Verification***  
+Show how the formal ILA model can be used for formal verification of the hardware implementation
+- **3:20 - 3:35 PM:** ***Simulation and Co-simulation***  
 Show how the ILA model enables automated generation of executable functional models (C++/SystemC) that can be used in hardware simulation and hardware-software co-simulation
-- **3:15 - 3:30 PM:** ***Formal Software-Hardware Co-verification***  
+- **3:35 - 3:50 PM:** ***Formal Software-Hardware Co-verification***  
 Show how the ILA model enables hardware-software co-verification using software verification techniques
-- **3:30 - 3:50 PM:** ***Memory Consistency***
+- **3:50 - 4:10 PM:** ***Memory Consistency***
 Show how the ILA-MCM model can be used to reason about correctness of code executing across processors and accelerators for a given MCM
-- **3:50 - 5:00 PM:** ***Compilation for Accelerator Design Feedback***  
+- **4:10 - 5:00 PM:** ***Compilation for Accelerator Design Feedback***  
 Show how the ILA instructions can be used in a compiler flow for early feedback on accelerator designs – illustrated for deep-learning accelerators using the TVM compiler framework
 
 ---
